@@ -1,0 +1,18 @@
+header {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+  a {
+    display: flex;
+  }
+
+  .favorites-heart-icon {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+  }
+}
