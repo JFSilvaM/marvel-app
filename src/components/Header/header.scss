@@ -15,4 +15,8 @@ header {
     gap: 8px;
     padding: 8px;
   }
+
+  @media (min-width: 834px) {
+    padding: 16px 48px;
+  }
 }

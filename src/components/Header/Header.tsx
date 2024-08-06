@@ -1,6 +1,6 @@
 import heartIcon from "../../assets/heart-icon.svg";
 import marvelLogo from "../../assets/marvel-logo.svg";
-import "./header.scss";
+import "./Header.scss";
 
 const Header = () => (
   <header>
