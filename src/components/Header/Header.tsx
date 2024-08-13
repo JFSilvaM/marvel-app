@@ -4,7 +4,7 @@ import marvelLogo from "../../assets/marvel-logo.svg";
 import redHeartIcon from "../../assets/red-heart-icon.svg";
 import { useMarvelCharactersContext } from "../../context/useMarvelCharactersContext";
 import { MarvelCharacterData } from "../../types/MarvelCharactersTypes";
-import "./Header.scss";
+import "./header.scss";
 
 const Header = () => {
   const [oldCharactersData, setOldCharactersData] = useState<
