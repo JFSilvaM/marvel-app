@@ -1,0 +1,21 @@
+.corner-of-card {
+  bottom: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  width: 0;
+}
+
+.small {
+  border-bottom: 6px solid white;
+  border-left: 6px solid transparent;
+  border-right: 6px solid white;
+  border-top: 6px solid transparent;
+}
+
+.large {
+  border-bottom: 12px solid white;
+  border-left: 12px solid transparent;
+  border-right: 12px solid white;
+  border-top: 12px solid transparent;
+}

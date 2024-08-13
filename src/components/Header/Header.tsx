@@ -1,21 +1,48 @@
-import heartIcon from "../../assets/heart-icon.svg";
+import { useNavigate } from "react-router-dom";
 import marvelLogo from "../../assets/marvel-logo.svg";
+import redHeartIcon from "../../assets/red-heart-icon.svg";
+import { useMarvelCharactersContext } from "../../context/useMarvelCharactersContext";
 import "./Header.scss";
+import { useState } from "react";
+import { MarvelCharacterData } from "../../types/MarvelCharactersTypes";
 
-const Header = () => (
-  <header>
-    <a href="/">
-      <img src={marvelLogo} alt="Marvel logo" />
-    </a>
+const Header = () => {
+  const [oldCharactersData, setOldCharactersData] = useState<
+    MarvelCharacterData[]
+  >([]);
 
-    <div className="favorites-heart-icon">
-      <a href="#">
-        <img src={heartIcon} alt="Heart icon" />
-      </a>
+  const { charactersData, setCharactersData } = useMarvelCharactersContext();
+  const navigate = useNavigate();
 
-      <span>3</span>
-    </div>
-  </header>
-);
+  const favoritesCharacters = () =>
+    charactersData.filter((characters) => characters.favorite === true);
+
+  const handleCharaters = () => {
+    setCharactersData(oldCharactersData);
+    navigate("/");
+  };
+
+  const handleFavorites = () => {
+    setOldCharactersData(charactersData);
+    setCharactersData(favoritesCharacters());
+    navigate("/");
+  };
+
+  return (
+    <header>
+      <button onClick={() => handleCharaters()}>
+        <img src={marvelLogo} alt="Marvel logo" />
+      </button>
+
+      <div className="favorites-heart-icon">
+        <button onClick={() => handleFavorites()}>
+          <img src={redHeartIcon} alt="Heart icon" />
+        </button>
+
+        <span>{favoritesCharacters().length}</span>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
