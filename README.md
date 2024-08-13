@@ -2,7 +2,7 @@
 
 Esta aplicación consiste en una pequeña web en la que puedes buscar personajes y añadirlos como favoritos, además, puedes ver la información de cada uno así como los cómics que pertenecen al personaje.
 
-Esta web se está desplegada en [Netlify](https://app.netlify.com/) y se puede acceder desde el siguiente enlace: [Marvel App]().
+Esta web se está desplegada en [Netlify](https://app.netlify.com/) y se puede acceder desde el siguiente enlace: [Marvel App](https://marvel-app-characters.netlify.app).
 
 ## Primeros pasos
 
