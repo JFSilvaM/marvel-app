@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import marvelLogo from "../../assets/marvel-logo.svg";
 import redHeartIcon from "../../assets/red-heart-icon.svg";
 import { useMarvelCharactersContext } from "../../context/useMarvelCharactersContext";
-import "./Header.scss";
-import { useState } from "react";
 import { MarvelCharacterData } from "../../types/MarvelCharactersTypes";
+import "./Header.scss";
 
 const Header = () => {
   const [oldCharactersData, setOldCharactersData] = useState<
